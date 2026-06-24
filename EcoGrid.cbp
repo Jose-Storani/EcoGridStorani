@@ -20,6 +20,7 @@
 			</Target>
 		</Build>
 		<Unit filename="main.cpp" />
+		<Unit filename="nodoRed.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

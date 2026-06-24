@@ -6,24 +6,7 @@
 #include <iomanip>
 
 using namespace std;
-enum class PerfilConsumo {
-    Residencial,
-    Comercial,
-    Industrial
-};
 
-string perfilToString(PerfilConsumo p) {
-    switch (p) {
-        case PerfilConsumo::Residencial:
-            return "Residencial";
-        case PerfilConsumo::Comercial:
-            return "Comercial";
-        case PerfilConsumo::Industrial:
-            return "Industrial";
-        default:
-            return "No existe";
-    }
-}
 
 
 class NodoRed {

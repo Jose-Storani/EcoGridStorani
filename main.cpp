@@ -1,5 +1,6 @@
 #include <iostream>
 #include "nodoRed.h"
+#include "nodoConsumidor.h"
 
 using namespace std;
 
