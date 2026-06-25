@@ -49,7 +49,7 @@ class NodoConsumidor : public NodoRed {
         };
 
         void infoNodo() const override {
-            NodoRed::infoNodo(); // reusa la impresión base
+            NodoRed::infoNodo();
             cout << "perfil=" << perfilToString(perfil_)
                  << " consumo=" << consumo_ << " kWh" << endl;
         }
