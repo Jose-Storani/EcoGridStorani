@@ -22,6 +22,7 @@ string perfilToString(PerfilConsumo p) {
             return "No existe";
     };
 };
+
 class NodoConsumidor : public NodoRed {
     private:
         double consumo_;

@@ -20,6 +20,8 @@
 			</Target>
 		</Build>
 		<Unit filename="main.cpp" />
+		<Unit filename="nodoConsumidor.h" />
+		<Unit filename="nodoProsumidor.h" />
 		<Unit filename="nodoRed.h" />
 		<Extensions />
 	</Project>
