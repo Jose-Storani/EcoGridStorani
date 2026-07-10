@@ -20,6 +20,7 @@
 			</Target>
 		</Build>
 		<Unit filename="docs/UML_diagrama_clases.png" />
+		<Unit filename="gridManager.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="nodoBateria.h" />
 		<Unit filename="nodoConsumidor.h" />
