@@ -1,12 +1,11 @@
 # depslib dependency file v1.0
-1782435291 source:d:\facultad\diseno de objetos\ecogridstorani\main.cpp
+1783983905 source:d:\facultad\diseno de objetos\ecogridstorani\main.cpp
 	<iostream>
-	"nodoRed.h"
-	"nodoConsumidor.h"
-	"nodoProsumidor.h"
-	"nodoBateria.h"
+	<memory>
+	<vector>
+	"ecogrid.h"
 
-1783626229 d:\facultad\diseno de objetos\ecogridstorani\nodored.h
+1783725077 d:\facultad\diseno de objetos\ecogridstorani\nodored.h
 	<string>
 	<stdexcept>
 	<iostream>
@@ -18,7 +17,104 @@
 1782435865 d:\facultad\diseno de objetos\ecogridstorani\nodoprosumidor.h
 	"NodoRed.h"
 
-1782435875 d:\facultad\diseno de objetos\ecogridstorani\nodobateria.h
+1783725077 d:\facultad\diseno de objetos\ecogridstorani\nodobateria.h
 	"NodoRed.h"
 	<stdexcept>
+
+1783983816 d:\facultad\diseno de objetos\ecogridstorani\ecogrid.h
+	"nodoRed.h"
+	"nodoConsumidor.h"
+	"nodoProsumidor.h"
+	"nodoBateria.h"
+	"orden.h"
+	"transaccionEnergia.h"
+	"gridManager.h"
+	"CSVParser.h"
+
+1783390262 d:\facultad\diseno de objetos\ecogridstorani\orden.h
+
+1783980936 d:\facultad\diseno de objetos\ecogridstorani\transaccionenergia.h
+	<chrono>
+	<iostream>
+	<iomanip>
+
+1783981129 d:\facultad\diseno de objetos\ecogridstorani\gridmanager.h
+	<map>
+	<queue>
+	<vector>
+	<functional>
+	<iostream>
+	<iomanip>
+	"orden.h"
+	"transaccionEnergia.h"
+	"nodoBateria.h"
+
+1783984095 d:\facultad\diseno de objetos\ecogridstorani\csvparser.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<stdexcept>
+	<iostream>
+	<iomanip>
+	"orden.h"
+
+1783984686 source:d:\facultad\diseno de objetos\ecogridstorani\src\main.cpp
+	<iostream>
+	<memory>
+	<vector>
+	"ecogrid.h"
+	<filesystem>
+
+1783983816 d:\facultad\diseno de objetos\ecogridstorani\src\ecogrid.h
+	"nodoRed.h"
+	"nodoConsumidor.h"
+	"nodoProsumidor.h"
+	"nodoBateria.h"
+	"orden.h"
+	"transaccionEnergia.h"
+	"gridManager.h"
+	"CSVParser.h"
+
+1783725077 d:\facultad\diseno de objetos\ecogridstorani\src\nodored.h
+	<string>
+	<stdexcept>
+	<iostream>
+	<iomanip>
+
+1783626560 d:\facultad\diseno de objetos\ecogridstorani\src\nodoconsumidor.h
+	"NodoRed.h"
+
+1782435865 d:\facultad\diseno de objetos\ecogridstorani\src\nodoprosumidor.h
+	"NodoRed.h"
+
+1783725077 d:\facultad\diseno de objetos\ecogridstorani\src\nodobateria.h
+	"NodoRed.h"
+	<stdexcept>
+
+1783390262 d:\facultad\diseno de objetos\ecogridstorani\src\orden.h
+
+1783980936 d:\facultad\diseno de objetos\ecogridstorani\src\transaccionenergia.h
+	<chrono>
+	<iostream>
+	<iomanip>
+
+1783981129 d:\facultad\diseno de objetos\ecogridstorani\src\gridmanager.h
+	<map>
+	<queue>
+	<vector>
+	<functional>
+	<iostream>
+	<iomanip>
+	"orden.h"
+	"transaccionEnergia.h"
+	"nodoBateria.h"
+
+1783984983 d:\facultad\diseno de objetos\ecogridstorani\src\csvparser.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<iostream>
+	"orden.h"
 

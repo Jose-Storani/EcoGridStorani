@@ -8,6 +8,7 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/EcoGrid" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="D:/Facultad/Diseno de Objetos/EcoGridStorani" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc-mingw64" />
@@ -20,15 +21,17 @@
 			</Target>
 		</Build>
 		<Unit filename="docs/UML_diagrama_clases.png" />
-		<Unit filename="gridManager.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="nodoBateria.h" />
-		<Unit filename="nodoConsumidor.h" />
-		<Unit filename="nodoProsumidor.h" />
-		<Unit filename="nodoRed.h" />
-		<Unit filename="orden.h" />
 		<Unit filename="sql/crear_esquema.sql" />
-		<Unit filename="transaccionEnergia.h" />
+		<Unit filename="src/CSVParser.h" />
+		<Unit filename="src/ecogrid.h" />
+		<Unit filename="src/gridManager.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/nodoBateria.h" />
+		<Unit filename="src/nodoConsumidor.h" />
+		<Unit filename="src/nodoProsumidor.h" />
+		<Unit filename="src/nodoRed.h" />
+		<Unit filename="src/orden.h" />
+		<Unit filename="src/transaccionEnergia.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

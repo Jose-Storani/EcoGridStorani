@@ -31,6 +31,12 @@ class GridManager {
         }
     }
 
+    void cargarOrdenes(const vector<Orden>& ordenes) {
+        for (const auto& orden : ordenes) {
+            insertarOrden(orden);
+        }
+    }
+
     //al inicio de cada tick(excepto el inicial), se carga el excedente del tick anterior como venta(askMap)
         void ofertarEnergiaBateria(NodoBateria& bateria,
                                 double precioBaseHorario,
@@ -59,8 +65,8 @@ class GridManager {
             auto mejorBid = bidMap_.begin(); // precio de compra más alto
             auto mejorAsk = askMap_.begin(); // precio de venta más bajo
 
-            double precioBid = mejorBid->first;
-            double precioAsk = mejorAsk->first;
+            double precioBid = mejorBid->first;// devuelve 0 ---
+            double precioAsk = mejorAsk->first; // devuelve 20 - 50
 
             if (precioBid >= precioAsk) {
                 Orden ordenCompra = mejorBid->second.front();
@@ -111,7 +117,7 @@ class GridManager {
         for (auto [precio, cola] : askMap_) {
             while (!cola.empty()) {
                 total += cola.front().kwh;
-                copia.pop();
+                cola.pop();
             }
         }
         return total;
@@ -126,7 +132,7 @@ class GridManager {
     void imprimirLibro() const {
         cout << fixed << setprecision(2);
         cout << "bidMap (compras)" << endl;
-        for (const auto& [precio, cola] : bidMap_) {
+        for (const auto [precio, cola] : bidMap_) {
             cout << " precio=" << precio
                       << "----" << cola.size() << " ordenes en cola" << endl;
         }
@@ -138,6 +144,6 @@ class GridManager {
     }
 
 
-}
+};
 
 

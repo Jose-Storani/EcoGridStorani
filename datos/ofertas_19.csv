@@ -1,0 +1,4 @@
+id_orden,lado,id_nodo,kwh,precio
+169,venta,3,0.5,3.8
+170,compra,7,5.0,3.9
+171,compra,9,8.0,3.9

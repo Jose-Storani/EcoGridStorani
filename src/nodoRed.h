@@ -10,7 +10,7 @@ using namespace std;
 class NodoRed {
 private:
     int         id_;
-    string ubicacion_;
+    string      ubicacion_;
     double      balanceEnergia_;
     double      saldoCuenta_;
 
