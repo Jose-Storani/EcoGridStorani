@@ -1,30 +1,28 @@
 #include <iostream>
 #include <memory>
 #include <vector>
-
+#include <soci/soci.h>
+#include <soci/sqlite3/soci-sqlite3.h>
 #include "ecogrid.h"
 
-
 using namespace std;
-
-//    id_orden  lado    id_nodo  kwh  precio
-//    101       venta   5        10   2.5
-//    102       venta   3        5    2.8
-//    201       compra  7        8    3.0
-//    202       compra  9        6    2.4
-//
-//  Resultado esperado (según el enunciado):
-//    - 1 transacción: vendedor 5, comprador 7, 8 kWh, precio 2.75
-//    - Orden 101 queda con 2 kWh remanentes (sin comprador)
-//    - Orden 201 se completa
-//    - Orden 202 (compra a 2.4) NO cruza con 101 (venta a 2.5)
-// ============================================================
 
 void imprimirSeparador(const string titulo) {
     cout << "\n========== " << titulo << " ==========" << endl;
 }
 
 int main() {
+        try {
+        // Esto crea (o abre) el archivo en el disco
+        soci::session sql(soci::sqlite3, "tp.db");
+        cout << "Conexión a SQLite exitosa." << endl;
+
+        // Acá va el resto de tu código que ya hiciste...
+
+    } catch (const exception& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
+    return 0;
     imprimirSeparador("Creación de nodos");
     //con puntero inteligente para ahorrar borrarlo manual
     vector<unique_ptr<NodoRed>> nodos;
