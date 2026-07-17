@@ -12,7 +12,17 @@ void imprimirSeparador(const string titulo) {
 }
 
 int main() {
-    imprimirSeparador("Creaci�n de nodos");
+    try {
+        // Esto crea (o abre) el archivo en el disco
+        soci::session sql(soci::sqlite3, "tp.db");
+        std::cout << "Conexión a SQLite exitosa." << std::endl;
+
+        // Acá va el resto de tu código que ya hiciste...
+
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+    imprimirSeparador("Creacion de nodos");
     //con puntero inteligente para ahorrar borrarlo manual
     vector<unique_ptr<NodoRed>> nodos;
 

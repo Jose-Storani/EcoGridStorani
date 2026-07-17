@@ -59,12 +59,13 @@
 	<iomanip>
 	"orden.h"
 
-1783984686 source:d:\facultad\diseno de objetos\ecogridstorani\src\main.cpp
+1784246645 source:d:\facultad\diseno de objetos\ecogridstorani\src\main.cpp
 	<iostream>
 	<memory>
 	<vector>
+	<soci/soci.h>
+	<soci/sqlite3/soci-sqlite3.h>
 	"ecogrid.h"
-	<filesystem>
 
 1783983816 d:\facultad\diseno de objetos\ecogridstorani\src\ecogrid.h
 	"nodoRed.h"
@@ -117,4 +118,486 @@
 	<vector>
 	<iostream>
 	"orden.h"
+
+1749664705 c:\msys64\mingw64\include\soci\soci.h
+	"soci/soci-platform.h"
+	"soci/backend-loader.h"
+	"soci/blob.h"
+	"soci/blob-exchange.h"
+	"soci/column-info.h"
+	"soci/connection-pool.h"
+	"soci/error.h"
+	"soci/exchange-traits.h"
+	"soci/fixed-size-ints.h"
+	"soci/into.h"
+	"soci/into-type.h"
+	"soci/once-temp-type.h"
+	"soci/prepare-temp-type.h"
+	"soci/procedure.h"
+	"soci/ref-counted-prepare-info.h"
+	"soci/ref-counted-statement.h"
+	"soci/row.h"
+	"soci/row-exchange.h"
+	"soci/rowid.h"
+	"soci/rowid-exchange.h"
+	"soci/rowset.h"
+	"soci/session.h"
+	"soci/soci-backend.h"
+	"soci/statement.h"
+	"soci/transaction.h"
+	"soci/type-conversion.h"
+	"soci/type-conversion-traits.h"
+	"soci/type-holder.h"
+	"soci/type-ptr.h"
+	"soci/type-wrappers.h"
+	"soci/use.h"
+	"soci/use-type.h"
+	"soci/values.h"
+	"soci/values-exchange.h"
+	<boost/version.hpp>
+	"soci/boost-fusion.h"
+	"soci/boost-optional.h"
+	"soci/boost-tuple.h"
+	"soci/boost-gregorian-date.h"
+	"soci/std-optional.h"
+
+1749664705 c:\msys64\mingw64\include\soci\soci-platform.h
+	<stdarg.h>
+	<string.h>
+	<string>
+	<cstring>
+	<cstdlib>
+	<ctime>
+	<memory>
+	"soci/soci-config.h"
+	<stdlib.h>
+	<stdlib.h>
+
+1783986105 c:\msys64\mingw64\include\stdarg.h
+	<_mingw_stdarg.h>
+
+1783986105 c:\msys64\mingw64\include\_mingw_stdarg.h
+	<vadefs.h>
+
+1783986105 c:\msys64\mingw64\include\vadefs.h
+	<_mingw.h>
+
+1783986105 c:\msys64\mingw64\include\_mingw.h
+	"_mingw_mac.h"
+	"_mingw_secapi.h"
+	"_cygwin.h"
+	<vadefs.h>
+
+1783986105 c:\msys64\mingw64\include\_mingw_mac.h
+
+1783986105 c:\msys64\mingw64\include\_mingw_secapi.h
+
+1783986105 c:\msys64\mingw64\include\_cygwin.h
+	<stddef.h>
+
+1783986105 c:\msys64\mingw64\include\stddef.h
+	<crtdefs.h>
+
+1783986105 c:\msys64\mingw64\include\crtdefs.h
+	<corecrt.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt.h
+	<_mingw.h>
+	<winapifamily.h>
+
+1783986105 c:\msys64\mingw64\include\winapifamily.h
+
+1783986105 c:\msys64\mingw64\include\string.h
+	<crtdefs.h>
+	<corecrt_memory.h>
+	<sec_api/string_s.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt_memory.h
+	<crtdefs.h>
+
+1783986105 c:\msys64\mingw64\include\sec_api\string_s.h
+	<string.h>
+
+1749664705 c:\msys64\mingw64\include\soci\soci-config.h
+
+1783986105 c:\msys64\mingw64\include\stdlib.h
+	<corecrt.h>
+	<corecrt_wstdlib.h>
+	<limits.h>
+	<sec_api/stdlib_s.h>
+	<malloc.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt_wstdlib.h
+	<corecrt.h>
+
+1783986105 c:\msys64\mingw64\include\limits.h
+	<crtdefs.h>
+
+1783986105 c:\msys64\mingw64\include\sec_api\stdlib_s.h
+	<stdlib.h>
+
+1783986105 c:\msys64\mingw64\include\malloc.h
+	<crtdefs.h>
+	<mm_malloc.h>
+
+1749664705 c:\msys64\mingw64\include\soci\backend-loader.h
+	"soci/soci-backend.h"
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\soci-backend.h
+	"soci/soci-platform.h"
+	"soci/error.h"
+	<cstddef>
+	<map>
+	<string>
+	<sstream>
+	<vector>
+	<algorithm>
+	<cstring>
+
+1749664705 c:\msys64\mingw64\include\soci\error.h
+	"soci/soci-platform.h"
+	<stdexcept>
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\blob.h
+	"soci/soci-platform.h"
+	<cstddef>
+	<memory>
+
+1749664705 c:\msys64\mingw64\include\soci\blob-exchange.h
+	"soci/blob.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\into-type.h
+	"soci/soci-backend.h"
+	"soci/type-ptr.h"
+	"soci/exchange-traits.h"
+	<cstddef>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\type-ptr.h
+
+1749664705 c:\msys64\mingw64\include\soci\exchange-traits.h
+	"soci/soci-types.h"
+	"soci/type-conversion-traits.h"
+	"soci/soci-backend.h"
+	"soci/type-wrappers.h"
+	<cstdint>
+	<ctime>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\soci-types.h
+	"soci/soci-platform.h"
+
+1749664705 c:\msys64\mingw64\include\soci\type-conversion-traits.h
+	"soci/soci-backend.h"
+	"soci/is-detected.h"
+	<type_traits>
+
+1749664705 c:\msys64\mingw64\include\soci\is-detected.h
+	<type_traits>
+
+1749664705 c:\msys64\mingw64\include\soci\type-wrappers.h
+
+1749664705 c:\msys64\mingw64\include\soci\use-type.h
+	"soci/soci-platform.h"
+	"soci/soci-backend.h"
+	"soci/type-ptr.h"
+	"soci/exchange-traits.h"
+	<cstddef>
+	<ostream>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\column-info.h
+	"soci/soci-backend.h"
+	"soci/type-conversion.h"
+	"soci/values.h"
+	<cstdint>
+
+1749664705 c:\msys64\mingw64\include\soci\type-conversion.h
+	"soci/type-conversion-traits.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	<cstddef>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\values.h
+	"soci/statement.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	<cstddef>
+	<map>
+	<sstream>
+	<string>
+	<utility>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\statement.h
+	"soci/bind-values.h"
+	"soci/into-type.h"
+	"soci/into.h"
+	"soci/noreturn.h"
+	"soci/use-type.h"
+	"soci/use.h"
+	"soci/soci-backend.h"
+	"soci/row.h"
+	"soci/blob.h"
+	<cstddef>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\bind-values.h
+	"soci/soci-platform.h"
+	"exchange-traits.h"
+	"into-type.h"
+	"into.h"
+	"soci-backend.h"
+	"use-type.h"
+	"use.h"
+	<boost/fusion/algorithm/iteration/for_each.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/version.hpp>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\into.h
+	"soci/into-type.h"
+	"soci/exchange-traits.h"
+	"soci/type-conversion.h"
+	<cstddef>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\use.h
+	"soci/use-type.h"
+	"soci/exchange-traits.h"
+	"soci/type-conversion.h"
+	"soci/soci-backend.h"
+
+1749664705 c:\msys64\mingw64\include\soci\noreturn.h
+
+1749664705 c:\msys64\mingw64\include\soci\row.h
+	"soci/type-holder.h"
+	"soci/blob.h"
+	"soci/type-conversion-traits.h"
+	"soci/soci-backend.h"
+	"soci/type-conversion.h"
+	<cstddef>
+	<map>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\type-holder.h
+	"soci/blob.h"
+	"soci/error.h"
+	"soci/soci-backend.h"
+	"soci/soci-types.h"
+	<cstdint>
+	<ctime>
+	<limits>
+	<sstream>
+	<type_traits>
+	<typeinfo>
+	<vector>
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\connection-pool.h
+	"soci/soci-platform.h"
+	<cstddef>
+
+1749664705 c:\msys64\mingw64\include\soci\fixed-size-ints.h
+	"soci/soci-types.h"
+	"soci/type-conversion-traits.h"
+	<cstdint>
+
+1749664705 c:\msys64\mingw64\include\soci\once-temp-type.h
+	"soci/soci-platform.h"
+	"soci/ref-counted-statement.h"
+	"soci/prepare-temp-type.h"
+
+1749664705 c:\msys64\mingw64\include\soci\ref-counted-statement.h
+	"soci/statement.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	"soci-unicode.h"
+	<sstream>
+
+1749664705 c:\msys64\mingw64\include\soci\soci-unicode.h
+	"soci/error.h"
+	<string>
+	<wchar.h>
+
+1783986105 c:\msys64\mingw64\include\wchar.h
+	<corecrt.h>
+	<corecrt_stdio_config.h>
+	<corecrt_wconio.h>
+	<corecrt_wstdlib.h>
+	<corecrt_wctype.h>
+	<_mingw_off_t.h>
+	<_mingw_stat64.h>
+	<swprintf.inl>
+	<sec_api/wchar_s.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt_stdio_config.h
+	<corecrt.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt_wconio.h
+	<corecrt.h>
+	<corecrt_stdio_config.h>
+	<stddef.h>
+	<sec_api/wconio_s.h>
+
+1783986105 c:\msys64\mingw64\include\sec_api\wconio_s.h
+	<corecrt_wconio.h>
+
+1783986105 c:\msys64\mingw64\include\corecrt_wctype.h
+	<corecrt.h>
+
+1783986105 c:\msys64\mingw64\include\_mingw_off_t.h
+
+1783986105 c:\msys64\mingw64\include\_mingw_stat64.h
+
+1783986105 c:\msys64\mingw64\include\swprintf.inl
+
+1783986105 c:\msys64\mingw64\include\sec_api\wchar_s.h
+	<wchar.h>
+
+1749664705 c:\msys64\mingw64\include\soci\prepare-temp-type.h
+	"soci/into-type.h"
+	"soci/use-type.h"
+	"soci/use.h"
+	"soci/ref-counted-prepare-info.h"
+
+1749664705 c:\msys64\mingw64\include\soci\ref-counted-prepare-info.h
+	"soci/bind-values.h"
+	"soci/ref-counted-statement.h"
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\procedure.h
+	"soci/statement.h"
+
+1749664705 c:\msys64\mingw64\include\soci\row-exchange.h
+	"soci/into-type.h"
+	"soci/exchange-traits.h"
+	"soci/row.h"
+	"soci/statement.h"
+	<cstddef>
+
+1749664705 c:\msys64\mingw64\include\soci\rowid.h
+	"soci/soci-platform.h"
+
+1749664705 c:\msys64\mingw64\include\soci\rowid-exchange.h
+	"soci/rowid.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	"soci/exchange-traits.h"
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\rowset.h
+	"soci/soci-platform.h"
+	"soci/statement.h"
+	<iterator>
+	<memory>
+
+1749664705 c:\msys64\mingw64\include\soci\session.h
+	"soci/soci-platform.h"
+	"soci/once-temp-type.h"
+	"soci/query_transformation.h"
+	"soci/connection-parameters.h"
+	"soci/logger.h"
+	"soci/log-context.h"
+	<cstddef>
+	<memory>
+	<ostream>
+	<sstream>
+	<string>
+	<forward_list>
+
+1749664705 c:\msys64\mingw64\include\soci\query_transformation.h
+	"soci/soci-platform.h"
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\connection-parameters.h
+	"soci/soci-platform.h"
+	<map>
+	<string>
+
+1749664705 c:\msys64\mingw64\include\soci\logger.h
+	"soci/soci-platform.h"
+	<ostream>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\log-context.h
+
+1749664705 c:\msys64\mingw64\include\soci\transaction.h
+	"soci/soci-platform.h"
+	"soci/session.h"
+
+1749664705 c:\msys64\mingw64\include\soci\values-exchange.h
+	"soci/values.h"
+	"soci/into-type.h"
+	"soci/use-type.h"
+	"soci/row-exchange.h"
+	<cstddef>
+	<sstream>
+	<string>
+	<vector>
+
+1749664705 c:\msys64\mingw64\include\soci\boost-fusion.h
+	"values.h"
+	"type-conversion-traits.h"
+	<boost/fusion/container/vector.hpp>
+	<boost/fusion/sequence/intrinsic/at.hpp>
+	<boost/fusion/sequence/intrinsic/size.hpp>
+	<boost/fusion/include/at.hpp>
+	<boost/fusion/support/is_sequence.hpp>
+	<boost/preprocessor/repetition/repeat.hpp>
+	<boost/preprocessor/repetition/repeat_from_to.hpp>
+	<boost/utility/enable_if.hpp>
+
+1749664705 c:\msys64\mingw64\include\soci\boost-optional.h
+	"soci/type-conversion-traits.h"
+	<boost/optional.hpp>
+	<boost/optional/optional_io.hpp>
+
+1749664705 c:\msys64\mingw64\include\soci\boost-tuple.h
+	"values.h"
+	"type-conversion-traits.h"
+	<boost/tuple/tuple.hpp>
+	<boost/fusion/adapted/boost_tuple.hpp>
+
+1749664705 c:\msys64\mingw64\include\soci\boost-gregorian-date.h
+	"soci/type-conversion-traits.h"
+	<boost/date_time/gregorian/gregorian_types.hpp>
+	<boost/date_time/gregorian/conversion.hpp>
+	<ctime>
+
+1749664705 c:\msys64\mingw64\include\soci\std-optional.h
+	"soci/type-conversion-traits.h"
+	<optional>
+
+1749664705 c:\msys64\mingw64\include\soci\sqlite3\soci-sqlite3.h
+	<soci/soci-platform.h>
+	<cstdarg>
+	<cstdint>
+	<vector>
+	<soci/soci-backend.h>
+	<soci/trivial-blob-backend.h>
+	<sqlite3.h>
+
+1749664705 c:\msys64\mingw64\include\soci\trivial-blob-backend.h
+	"soci/soci-backend.h"
+	"soci/session.h"
+	<vector>
+	<cstring>
+	<cstdint>
+
+1782650234 c:\msys64\mingw64\include\sqlite3.h
+	<stdarg.h>
 
