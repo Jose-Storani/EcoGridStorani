@@ -10,7 +10,6 @@ using namespace std;
 void imprimirSeparador(const string titulo) {
     cout << "\n========== " << titulo << " ==========" << endl;
 }
-
 int main() {
     /*try {
         // Esto crea (o abre) el archivo en el disco

@@ -18,13 +18,9 @@ public:
                                + (hora < 10 ? "0" : "")
                                + to_string(hora)
                                + ".csv";
-
-
         ifstream archivo(nombreArchivo);
-
         vector<Orden> ordenes;
         string linea;
-
         // saltear encabezado
         getline(archivo, linea);
 
