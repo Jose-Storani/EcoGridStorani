@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <iomanip>
 
 #include "orden.h"
 
@@ -20,11 +21,18 @@ public:
                                + ".csv";
         ifstream archivo(nombreArchivo);
         vector<Orden> ordenes;
+
+        if (!archivo.is_open()) {
+            cerr << "[CSV] Hora " << hora << ": ADVERTENCIA, no se pudo abrir '"
+                 << nombreArchivo << "'. Se continua sin ordenes para esta hora." << endl;
+            return ordenes;
+        }
+
         string linea;
         // saltear encabezado
         getline(archivo, linea);
 
-        // leer líneas
+        // leer lï¿½neas
         while (getline(archivo, linea)) {
 
             if (linea.empty()) continue;
@@ -54,6 +62,15 @@ public:
 
         cout << "[CSV] Hora " << hora << ": "
              << ordenes.size() << " ordenes cargadas." << endl;
+
+        cout << fixed << setprecision(2);
+        for (const auto& orden : ordenes) {
+            cout << "  [orden] id=" << orden.idOrden
+                 << " lado=" << (orden.esCompra ? "compra" : "venta")
+                 << " nodo=" << orden.idNodo
+                 << " kwh=" << orden.kwh
+                 << " precio=" << orden.precio << endl;
+        }
 
         return ordenes;
     }

@@ -42,6 +42,11 @@ class GridManager {
                                 double precioBaseHorario,
                                 uint64_t secuencia) {
             double kwhDisponible = bateria.calcularExcedente();
+            if (kwhDisponible <= 0.001) return;
+
+            // se descuenta apenas se oferta; si no se vende, vuelve como parte
+            // del excedente no vendido al final del tick (evita duplicar la carga)
+            bateria.liberarEnergia(kwhDisponible);
 
         Orden ordenBateria(
             static_cast<int>(secuencia),
@@ -62,8 +67,8 @@ class GridManager {
         vector<TransaccionEnergia> transacciones;
 
         while (!bidMap_.empty() && !askMap_.empty()) {
-            auto mejorBid = bidMap_.begin(); // precio de compra más alto
-            auto mejorAsk = askMap_.begin(); // precio de venta más bajo
+            auto mejorBid = bidMap_.begin(); // precio de compra mï¿½s alto
+            auto mejorAsk = askMap_.begin(); // precio de venta mï¿½s bajo
 
             double precioBid = mejorBid->first;// devuelve 0 ---
             double precioAsk = mejorAsk->first; // devuelve 20 - 50

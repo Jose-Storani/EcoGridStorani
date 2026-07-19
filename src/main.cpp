@@ -176,7 +176,7 @@ int main() {
     double excedente = gridManager.calcularExcedenteNoVendido();
     if (excedente > 0.001) {
         cout << "Excedente a bateria: " << excedente << " kWh" << endl;
-        bateria.absorberExcedente(excedente); //revisar calculo, el excedente es muy alto al final decada tick
+        bateria.absorberExcedente(excedente);
     }
 
     //limpiar el libro para el pr�ximo tick
