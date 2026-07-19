@@ -59,7 +59,7 @@
 	<iomanip>
 	"orden.h"
 
-1784246645 source:d:\facultad\diseno de objetos\ecogridstorani\src\main.cpp
+1784502659 source:d:\facultad\diseno de objetos\ecogridstorani\src\main.cpp
 	<iostream>
 	<memory>
 	<vector>
@@ -100,7 +100,7 @@
 	<iostream>
 	<iomanip>
 
-1783981129 d:\facultad\diseno de objetos\ecogridstorani\src\gridmanager.h
+1784502659 d:\facultad\diseno de objetos\ecogridstorani\src\gridmanager.h
 	<map>
 	<queue>
 	<vector>
@@ -111,12 +111,13 @@
 	"transaccionEnergia.h"
 	"nodoBateria.h"
 
-1783984983 d:\facultad\diseno de objetos\ecogridstorani\src\csvparser.h
+1784502659 d:\facultad\diseno de objetos\ecogridstorani\src\csvparser.h
 	<fstream>
 	<sstream>
 	<string>
 	<vector>
 	<iostream>
+	<iomanip>
 	"orden.h"
 
 1749664705 c:\msys64\mingw64\include\soci\soci.h

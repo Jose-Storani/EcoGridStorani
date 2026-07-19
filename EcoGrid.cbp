@@ -17,8 +17,8 @@
 					<Add directory="C:/msys64/mingw64/include" />
 				</Compiler>
 				<Linker>
-					<Add library="soci_core_4_0" />
-					<Add library="soci_sqlite3_4_0" />
+					<Add library="soci_core_4_1" />
+					<Add library="soci_sqlite3_4_1" />
 					<Add library="sqlite3" />
 					<Add directory="C:/msys64/mingw64/lib" />
 				</Linker>
