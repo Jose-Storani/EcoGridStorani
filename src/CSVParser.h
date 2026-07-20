@@ -23,7 +23,7 @@ public:
         vector<Orden> ordenes;
 
         if (!archivo.is_open()) {
-            cerr << "[CSV] Hora " << hora << ": ADVERTENCIA, no se pudo abrir '"
+            cerr << "Hora " << hora << ": no se pudo abrir '"
                  << nombreArchivo << "'. Se continua sin ordenes para esta hora." << endl;
             return ordenes;
         }
@@ -60,7 +60,7 @@ public:
 
         }
 
-        cout << "[CSV] Hora " << hora << ": "
+        cout << "Hora " << hora << ": "
              << ordenes.size() << " ordenes cargadas." << endl;
 
         cout << fixed << setprecision(2);

@@ -12,17 +12,15 @@
 
 using namespace std;
 
-// Saldo con el que se siembra la bateria comunitaria en NODOS: el enunciado
-// pide saldo "ilimitado para simplificar" para que nunca la rechace el
-// trigger de saldo insuficiente al comprar excedente.
-static constexpr double SALDO_ILIMITADO_BATERIA = 999999.0;
+//saldo alto para que el trigger no rechace
+const double SALDO_ILIMITADO_BATERIA = 999999.0;
 
 class CapaDatos {
 private:
     soci::session sql_;
 
 public:
-    explicit CapaDatos(const string& dbPath) : sql_(soci::sqlite3, dbPath) {
+    CapaDatos(const string& dbPath) : sql_(soci::sqlite3, dbPath) {
         sql_ << "PRAGMA foreign_keys = ON";
     }
 
@@ -83,13 +81,10 @@ public:
             "    END; "
             "END";
 
-        cout << "[CapaDatos] Esquema creado correctamente (4 tablas + trigger).\n";
+        cout << "Esquema creado\n";
     }
 
-    // La bateria comunitaria viaja dentro del mismo vector<unique_ptr<NodoRed>>
-    // que el resto de los nodos (es-un NodoRed como cualquier otro). Se
-    // reconoce por tipo == "Bateria" para sembrarla con saldo ilimitado en
-    // vez de su saldo en memoria (que arranca en 0).
+
     void sembrarNodos(const vector<unique_ptr<NodoRed>>& nodos) {
         for (const auto& nodo : nodos) {
             int id = nodo->getId();
@@ -104,7 +99,7 @@ public:
                 soci::use(saldo), soci::use(perfil);
         }
 
-        cout << "[CapaDatos] " << nodos.size() << " nodos sembrados en NODOS.\n";
+        cout << nodos.size() << " nodos sembrados en NODOS.\n";
     }
 
     void sembrarTarifas() {
@@ -115,7 +110,7 @@ public:
             sql_ << "INSERT INTO CONFIG_TARIFAS (hora, precio_base_kwh) VALUES (:hora, :precio)",
                 soci::use(hora), soci::use(precio);
         }
-        cout << "[CapaDatos] Tarifas de ejemplo sembradas en CONFIG_TARIFAS.\n";
+        cout << "Tarifas de ejemplo sembradas en CONFIG_TARIFAS.\n";
     }
 
     double obtenerPrecioBase(int hora, double porDefecto = 1.5) {
@@ -124,7 +119,7 @@ public:
             sql_ << "SELECT precio_base_kwh FROM CONFIG_TARIFAS WHERE hora = :hora",
                 soci::use(hora), soci::into(precio);
         } catch (const soci::soci_error&) {
-            cerr << "[CapaDatos] No hay tarifa configurada para la hora " << hora
+            cerr << "No hay tarifa configurada para la hora " << hora
                  << ", se usa el valor por defecto " << porDefecto << ".\n";
             precio = porDefecto;
         }
@@ -154,14 +149,12 @@ public:
             return true;
         } catch (const soci::soci_error& e) {
             tr.rollback();
-            cerr << "[CapaDatos] Tick rechazado, se ejecuto ROLLBACK: " << e.what() << "\n";
+            cerr << "Tick rechazado, se ejecuto ROLLBACK: " << e.what() << "\n";
             return false;
         }
     }
 
 private:
-    // Equivalente en C++ del procedimiento almacenado actualizar_saldo_y_lecturas
-    // de sql/crear_esquema.sql (SQLite no soporta procedimientos PL/SQL).
     void actualizarSaldoYLecturas(int idNodo, double kwh, double precio,
                                    const string& tipoOperacion, int horaSimulada) {
         double monto = kwh * precio;

@@ -30,23 +30,10 @@ int main() {
          9, "Fravega",
         100.0,  6.0, PerfilConsumo::Residencial));
 
-        nodos.push_back(make_unique<NodoConsumidor>(
-         19,  "Kymco",
-         100.0, 6.0, PerfilConsumo::Residencial));
 
-    nodos.push_back(make_unique<NodoConsumidor>(
-        29, "Honda",
-        100.0, 6.0, PerfilConsumo::Residencial));
-
-    // La bateria comunitaria es-un NodoRed como cualquier otro nodo, asi que
-    // vive en el mismo vector polimorfico. Se guarda la referencia antes del
-    // move() para poder seguir llamando sus metodos propios (getCargaActual,
-    // absorberExcedente, liberarEnergia) que no son parte de la interfaz de
-    // NodoRed; el objeto no se mueve de lugar en memoria al mover el
-    // unique_ptr, asi que la referencia sigue siendo valida.
     auto bateriaPtr = make_unique<NodoBateria>(99, "Bateria Comunitaria", 0.0);
-    NodoBateria& bateria = *bateriaPtr;
-    nodos.push_back(move(bateriaPtr));
+    NodoBateria& bateria = *bateriaPtr; //referencia a nodoBateria para que se pueda seguir llamando en el main
+    nodos.push_back(move(bateriaPtr));//se le pasa propiedad del puntero al vector
 
     //unique_ptr tiene que pasarse por referencia siempre o tira error
     for (const auto& nodo : nodos) {
@@ -87,16 +74,15 @@ int main() {
                 trans.imprimir();
             }
 
-            // persistencia transaccional del tick: si falla, se loguea y se
-            // sigue con el proximo tick (no se aborta el programa)
+            // persistencia transaccional del tick: si falla, se loguea y se sigue con el proximo tick
             if (!capaDatos.persistirTransacciones(transacciones, hora)) {
                 cerr << "[GridManager] Tick " << hora
                      << " rechazado por la BD, se continua con el siguiente tick." << endl;
             }
         }
 
-    } catch (std::exception const& e) {
-        std::cerr << "Error: " << e.what() << "\n";
+    } catch (exception const& e) {
+        cerr << "Error: " << e.what() << "\n";
         return 1;
     }
 
